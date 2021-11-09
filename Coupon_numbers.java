@@ -1,19 +1,19 @@
 import java.util.Scanner;
 
 public class Coupon_numbers {
-	public static int random(int N) {
-		return (int)(Math.random()*N);   /* generating random numbers */
+	public static int random() {
+		return (int)(Math.random()*1000);   /* generating random numbers */
 	}
 
 	public static int distinctCoupon(int N) {
-		boolean[] isCollected = new boolean[N];  /* iscollected[i] = true if i is already collected */
+		boolean[] isCollected = new boolean[N];  /* initially this boolean array is filled with false . iscollected[i] = true if i is already collected */
 		int count = 0;
 		int distinct = 0;  /* number of distint numbers collected */
 
 		while(distinct < N) {
-			int value = random(N);
+			int value = random();
 			count++;
-			if( !isCollected[value] ) {
+			if( isCollected[value] == false ) {
 				distinct++;
 				isCollected[value] = true;
 			}
