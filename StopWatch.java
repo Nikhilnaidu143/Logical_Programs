@@ -1,3 +1,4 @@
+/* STOP WATCH AND ELAPSED TIME */
 import java.util.Scanner;
 
 public class StopWatch {
